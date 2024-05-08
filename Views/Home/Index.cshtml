@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+
+
+        <img src="~/images/etudiant.jpg" class="d-block w-100" alt="blackboard image">
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+           
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+
+        <img src="~/images/et1.png" class="d-block w-100" alt="geometry image">
+
+        <div class="container">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+
+          <img src="~/images/blackboard.jpg" class="d-block w-100" alt="blackboard image">
+          <div class="container">
+              <div class="carousel-caption text-start">
+                  <h1>Vous souhaitez obtenir des informations sur nos filières et le processus d’admission ?</h1>
+                  <p>Nos Ingénieurs conseillers seront à votre disposition pour vous orienter</p>
+                  <p><a class="btn btn-lg btn-success" asp-controller="Account" asp-action="Login">se pré-inscrire à l'Emsi </a></p>
+                  
+              </div>
+          </div>
+
+
+          <div class="container">
+
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#083B32" />
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" alignment-baseline="middle" font-size="20">L'Employabilité</text>
+            </svg><BR><BR>
+
+
+            <p>L’EMSI favorise la collaboration des entreprises en multipliant les rencontres professionnelles et en nourrissant les partenariats économiques..</p><BR>
+            <p><a class="btn btn-success" asp-controller="Home" asp-action="About" > details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#083B32" />
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" alignment-baseline="middle" font-size="20">
+                    <tspan x="50%" dy="0"> L'Excellence </tspan>
+                    <tspan x="50%" dy="1.2em">Académique</tspan>
+                </text>
+            </svg><BR><BR>
+
+            <p>A l'Emsi les etudiants travaillent en coordination commune sous la direction des responsables de filières et forment le conseil d’enseignement de l’école..</p>
+
+            <p><a class="btn btn-success" asp-controller="Home" asp-action="Formation" > détails &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#083B32" />
+                <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle" alignment-baseline="middle" font-size="20">
+                    <tspan x="50%" dy="0"> 18  </tspan>
+                    <tspan x="50%" dy="1.2em">Campus</tspan>
+
+
+                </text>
+            </svg><BR><BR>
+            <p>Les clubs des élèves procurent une expérience d’apprentissage hors des salles de classe par rapport à la communication, le leadership, le networking et le travail d’équipe..</p>
+            <p><a class="btn btn-success" asp-controller="Home" asp-action="Campus" > détails &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <style>
+        .btn-purple {
+            background-color: purple;
+        }
+    </style>
+    
+    
+    <br /><br />
+
+         
+          
+              <span class="custom-clock" style="font-size: 3.5em;">🕝</span> <b>      Du Lundi au samedi de 08:30 à 18h</b>
+
+              <span class="custom-clock" style="font-size: 3.5em;">   📞</span>  <b>        : 0537764050   </b>
+              <b> ou par mail : informations@emsi.ma </b>
+
+              <span class="custom-clock" style="font-size: 3.5em;">     📍</span>      <b>     EMSI Rabat </b>
+          
+        <b> 49, Rue Patrice Lumumba, Hassan   </b><br /><br />
+                  
+        <strong><font color="black"> contactez-nous aussi à:</font></strong>
+                  
+        <div class="mt-4">
+            <a class="btn btn-primary" href="https://www.facebook.com/emsi.ma/"><B>facebook</B></a>
+
+            <a class="btn btn-danger" href="https://www.youtube.com/channel/UC5BiOBai2N48ytbCRQWWqJw"><B>Youtube</B></a>
+
+            <a class="btn btn-purple" href="https://www.instagram.com/groupe.emsi/?igshid=7rikpderxqla"><B><font color="white">Instagram</font></B></a>
+        </div>
+
+    
+
+
+            <br /><br />
+
+    <center>l'EMSI est reconnue par l'État.</center>
+    
+
+
+        </div ><!-- /.container -->

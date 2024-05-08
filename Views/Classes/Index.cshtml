@@ -1,0 +1,85 @@
+@model IEnumerable<SchoolManagementApp.MVC.Data.Class>
+
+@{
+    ViewData["Title"] = "CLasse";
+}
+<br />
+<h1><font size=10 color="#03224c"><center>Séance</center></font></h1><br />
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Créer</a><br />
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lecturer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @item.Course.Code - @item.Course.Name
+            </td>
+            <td>
+                @item.Lecturer.FirstName @item.Lecturer.Specialité
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Modifier</a> 
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Détails</a> 
+                <button data-id="@item.Id" class="btn btn-danger deleteBtn" type="button">Supprimer</button>
+                <a asp-action="ManageEnrollments" class="btn btn-success" asp-route-classId="@item.Id">faire une inscription</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<form asp-action="Delete" id="classDeleteForm">
+    <input type="hidden" id="classid" name="Id"/>
+</form>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $('.table').DataTable();
+            
+            $('.deleteBtn').click(function(e){
+                Swal.fire({
+                    title: 'vous êtes sûr?',
+                    text: "Vous ne pouvez pas revenir en arrière!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'oui, supprimer !'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                            'supprimé!',
+                            'votre fichier est supprimé.',
+                            'reussi'
+                            );
+                            var btn = $(this);
+                            var id = btn.data("id");
+                            $('#classid').val(id);
+                            $('#classDeleteForm').submit();
+                        }
+                    })
+            })
+        })
+    </script>
+}<br /><br /><br />
+<center>l'Emsi est reconnue par l'Etat.</center>

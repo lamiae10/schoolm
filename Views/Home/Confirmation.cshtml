@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            /* Your original navbar styles here */
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #confirmation-wrapper {
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        #confirmation-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #28a745;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: #03224c;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .highlight {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .welcome-message {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <div id="confirmation-wrapper">
+        <div id="confirmation-container">
+            <h1>Félicitations, vous vous êtes pré-inscrit(e) à l'EMSI avec succès !</h1>
+
+            <p>
+                Vous êtes à présent dans la liste d'attente. Notre équipe vous contactera bientôt pour vous fournir votre nouvel emploi du temps.
+                Nous vous invitons à vous rendre à l'EMSI avant le début du mois prochain pour finaliser votre inscription et éviter tout retard pour la nouvelle session.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    Bienvenue
+                    <strong>@User.Identity.Name.Substring(0, User.Identity.Name.IndexOf('@'))</strong>!
+                </p>
+            </div>
+
+            <div class="welcome-message">
+                <p>L'EMSI est reconnue par l'État.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 L'EMSI. Tous droits réservés.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@model SchoolManagementApp.MVC.Models.UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Profil de l'utilisateur";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EMSI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Ajoutez d'autres liens CSS au besoin -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-container {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .school-info {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <center>
+                <h1 style="color: #03224c;">Bienvenue, @Model.Name.Substring(0, Model.Name.IndexOf('@')) !</h1><br />
+
+                <img src="@Model.ProfileImage" alt="Photo de profil" class="profile-image" />
+            </center>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h3>Informations personnelles :</h3>
+                    <p>
+                        <strong>Nom:</strong> @Model.Name.Substring(0, Model.Name.IndexOf('@')) <br />
+                        <strong>Email:</strong> @Model.Name 
+                    </p>
+                </div>
+                <!-- Ajoutez d'autres informations personnelles au besoin -->
+
+                <div class="col-md-6">
+                    <!-- Ajoutez d'autres détails ou widgets ici -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <center>
+            <p class="school-info">EMSI - École d'ingénieurs | Formation de qualité reconnue par l'État.</p>
+        </center>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ajoutez d'autres scripts JS au besoin -->
+</body>
+</html>

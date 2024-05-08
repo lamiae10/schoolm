@@ -1,0 +1,53 @@
+@model IEnumerable<SchoolManagementApp.MVC.Data.Enrollment>
+
+@{
+    ViewData["Title"] = "Séance";
+}
+<br />
+<h1><center><font size=10 color="#03224c">Séance</font></center></h1>
+<br />
+<p>
+    <a asp-action="Create">Créer </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Id)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Modifier</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Détails</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<br />
+<center>l'Emsi est reconnue par l'Etat.</center>

@@ -1,0 +1,48 @@
+@model SchoolManagementApp.MVC.Data.Class
+
+@{
+    ViewData["Title"] = "Détails";
+}
+
+<h1><font size=10 color="#03224c"><center>Détails de la séance</center></font></h1>
+<br />
+
+<div>
+    <h4>Séance</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Course.Code - @Model.Course.Name
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lecturer)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Lecturer.FirstName @Model.Lecturer.Specialité
+        </dd>
+    </dl>
+</div>
+<br />
+<div>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model?.Id">Modifier</a> 
+    <a class="btn btn-dark" asp-action="Index">Retour à la liste</a>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<center>l'Emsi est reconnue par l'Etat.</center>
